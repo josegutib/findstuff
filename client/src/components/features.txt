@@ -1,0 +1,6 @@
+- paginacion
+- filtrado
+-estilar botón
+- estilar texto del product card
+- tamaño imagenes product card
+- color navbar
