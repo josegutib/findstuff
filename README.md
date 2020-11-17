@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Find Stuff
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Henry Labs Project
 
 ## Available Scripts
 
