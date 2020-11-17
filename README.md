@@ -1,15 +1,13 @@
-# Find Stuff
+# Henry Labs
 
-Henry Labs Project
+## FindStuff
 
-## Available Scripts
+Aplicación  que realiza peticiones a la API de Mercado Libre y devuelve productos que coinciden con la busqueda.
 
-In the project directory, you can run:
+### Realizado por:
 
-### `yarn start`
+José Manuel Gutierrez
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 
