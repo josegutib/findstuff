@@ -15,6 +15,7 @@ outline:none;
 height:100%;
 margin:0;
 padding:0;
+padding-left:10px;
 `
 
 const StyledButton = styled.button`
@@ -25,6 +26,7 @@ margin:0;
 padding:6px;
 margin-left:5px;
 background:silver;
+outline:none;
 `
 
 

@@ -9,7 +9,7 @@ const FlexDiv = styled.div`
     justify-content:space-around;
     border:1px solid silver;
     border-radius:4px;
-    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     padding-top:20px;
     padding-left:40px;
     padding-right:40px;
@@ -34,10 +34,10 @@ const Product = ({ imagen, titulo, precio, condicion, stock }) => {
             </div>
             
             <CardBody>
-                <StyledTitle className="card-title">{titulo}</StyledTitle>
-                <p style={{fontStyle:"italic"}} className="card-text">Precio: {precio}</p>
-                <p style={{fontStyle:"italic"}} className="card-text">Condicion: {condicion}</p>
-                <p style={{fontStyle:"italic"}} className="card-text">Stock: {stock}</p>
+                <StyledTitle style={{marginLeft:"20px"}} className="card-title">{titulo}</StyledTitle>
+                <p style={{fontStyle:"italic", marginLeft:"20px"}} className="card-text">Precio: {precio}</p>
+                <p style={{fontStyle:"italic", marginLeft:"20px"}} className="card-text">Condicion: {condicion}</p>
+                <p style={{fontStyle:"italic", marginLeft:"20px"}} className="card-text">Stock: {stock}</p>
             </CardBody>
         </FlexDiv>
     )
