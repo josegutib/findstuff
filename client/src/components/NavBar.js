@@ -10,6 +10,10 @@ const StyledNav = styled.nav`
     height: 100px;
     margin-bottom:24px;
 
+    @media (max-width: 768px) {
+        height:200px;
+  }
+
 `
 
 const StyledH1 = styled.h1`
@@ -30,17 +34,17 @@ font-size:18px;
 
 
 const NavBar = () => {
- return (
-     <StyledNav>
-         <div style={{width:'100%', display:'flex', alignItems:"center"}}>
-             <StyledH1>Find <br/> Stuff</StyledH1>
-             <OrderFilter />
-         </div>
-         <div style={{width:'100%', display:'flex', alignItems:'center', justifyContent:'flex-end',padding:'20px'}}>
-             <SearchBar />
-         </div>
-     </StyledNav>
- )
+    return (
+        <StyledNav>
+            <div style={{ width: '100%', display: 'flex', alignItems: "center" }}>
+                <StyledH1>Find <br /> Stuff</StyledH1>
+                <OrderFilter />
+            </div>
+            <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '20px' }}>
+                <SearchBar />
+            </div>
+        </StyledNav>
+    )
 }
 
 export default NavBar;

@@ -4,14 +4,21 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+    display:grid;
+    width:90%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:20px;
     margin: 0 auto;
-    width: 50%;
+
+    @media (max-width: 768px) {
+        width:90%;
+        grid-template-columns: 1fr;
+  }
 `
 
 
 const CatalogoContainer = ({ products, query, filter }) => {
 
-    console.log(filter)
     
         return (
             <StyledDiv className="container-fluid  ">
