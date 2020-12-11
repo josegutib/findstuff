@@ -30,6 +30,12 @@ const cacheObject = {}
 router.post("/", async function (req, res) {
     const { string, filter, page } = req.body
 
+    console.log({
+                string,
+                filter,
+                page
+                })
+
     const filterObject = {
         "Mas Relevantes": "relevance",
         "Mayor Precio": "price_desc",
@@ -37,7 +43,7 @@ router.post("/", async function (req, res) {
     }
 
 
-    const objectKey = `${string}-${filter}`
+    const objectKey = `${string}-${filter}-${page}`
 
 
     console.log(page)

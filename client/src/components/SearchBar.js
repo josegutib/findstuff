@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
 height:60px;
+
 `
 
 const StyledInput = styled.input`
@@ -46,19 +47,48 @@ const SearchBar = ({ setProducts, setQuery, filter, query, page, setPage }) => {
         setPage(0)
     }
 
-    useEffect(async () => {
-        if (query) {
-            const response = await searchProducts(query, filter, page)
-            setProducts(response)
+
+    const onButtonClickWrap = () => {
+        if(string === ""){
+            alert("Por favor ingrese una busqueda")
         }else{
-            setProducts([])
+            onButtonClick()
         }
-    }, [query, filter, page])
+    }
+
+    useEffect(() => {
+
+
+        const f = async () => {
+            if (query) {
+                const response = await searchProducts(query, filter, page)
+                console.log(response)
+                setProducts(response)
+            } else {
+                setProducts([])
+            }
+        }
+
+        console.log({query,
+                    filter,
+                page})
+
+        f()
+    }, [query, filter, page, setProducts])
+
+
+
 
     return (
         <StyledDiv>
-            <StyledInput placeholder="Search" onChange={(e) => setString(e.target.value)} />
-            <StyledButton onClick={() => onButtonClick()}>Search</StyledButton>
+            <StyledInput placeholder="Search" onKeyUp={(e) => {
+                if(e.keyCode === 13){
+                    e.preventDefault();
+                    onButtonClickWrap()
+                }
+                console.log(e.keyCode)
+            } } onChange={(e) => setString(e.target.value)} />
+            <StyledButton onClick={() => onButtonClickWrap()}>Search</StyledButton>
         </StyledDiv>
 
     )
