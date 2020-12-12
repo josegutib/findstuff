@@ -9,6 +9,17 @@ Aplicación  que realiza peticiones a la API de Mercado Libre y devuelve product
 
 
 
+### Frontend
+desde la carpeta `client/` correr
+```bash
+npm install
+npm start # corre la app de React en el puerto 3000
+```
 
-
+### Api
+en otra consola, desde la carpeta `api/` correr
+```bash
+npm install
+npm start # corre la api en el puerto 3001
+```
 
